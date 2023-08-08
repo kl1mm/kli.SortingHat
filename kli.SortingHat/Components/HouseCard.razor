@@ -1,0 +1,13 @@
+﻿<button class="box bg-dark p-2 rounded-3 d-flex align-items-center justify-content-center" @onclick="PlaySoundAsync">
+    <img src="@House.ImageSrc" width="150"/>
+</button>
+
+@code {
+    [Inject] public IJSRuntime JSRuntime { get; set; }    
+    [Parameter] public House House { get; set; } = default!;
+
+    private async Task PlaySoundAsync()
+    {
+        await JSRuntime.InvokeVoidAsync("playAudioFile", this.House.SoundSrc);      
+    }
+}
