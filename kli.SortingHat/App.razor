@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap-icons/bootstrap-icons.min.css"/>
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="icon" type="image/png" href="favicon.png"/>
-    <link rel="stylesheet" href="BlazorApp2.styles.css"/>
+    <link rel="stylesheet" href="kli.SortingHat.styles.css" />
     <HeadOutlet/>
 </head>
 
@@ -38,8 +38,9 @@
 
 <script src="_framework/blazor.web.js" suppress-error="BL9992"></script>
 <script>
-    window.playAudioFile = (src) => {
-        new Audio(src).play();
+    window.playAudioFile = (audioId) => {
+        var audioEle = document.getElementById(audioId);
+        audioEle.play();
     };
 </script>
 </body>

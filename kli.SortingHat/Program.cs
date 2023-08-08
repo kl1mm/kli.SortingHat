@@ -1,4 +1,4 @@
-using BlazorApp2;
+using kli.SortingHat;
 
 var builder = WebApplication.CreateBuilder(args);
 
